@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -18,22 +19,16 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CreateUserServlet
  */
-@WebServlet(
-		urlPatterns="/deleteServlet", 
-		initParams= {
-				@WebInitParam(name="dbUrl", value="jdbc:mysql://localhost/mydb"),
-				@WebInitParam(name="dbUser", value="root"),
-				@WebInitParam(name="dbPassword", value="password")
-				}
-		)
+@WebServlet(urlPatterns="/deleteServlet")
 public class DeleteUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Connection conn;
        
 	public void init(ServletConfig config) {
 		try {
+			ServletContext context = config.getServletContext();
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(config.getInitParameter("dbUrl"), config.getInitParameter("dbUser"), config.getInitParameter("dbPassword"));
+			conn = DriverManager.getConnection(context.getInitParameter("dbUrl"), context.getInitParameter("dbUser"), context.getInitParameter("dbPassword"));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
