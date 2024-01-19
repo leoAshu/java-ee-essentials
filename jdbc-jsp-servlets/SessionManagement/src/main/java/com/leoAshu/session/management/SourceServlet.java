@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,13 @@ public class SourceServlet extends HttpServlet {
 
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		System.out.println("SourceServlet");
+		Cookie[] cookies = request.getCookies();
+		for(int i=0; i<cookies.length; i++) {
+			System.out.println(cookies[i].getName());
+			System.out.println(cookies[i].getValue());
+		}
+		
 		String userName = request.getParameter("userName");
 		HttpSession session = request.getSession();
 		session.setAttribute("user", userName);
