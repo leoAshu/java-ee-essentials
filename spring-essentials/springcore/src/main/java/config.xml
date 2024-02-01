@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Value using p-schema or p-namespace -->
+	<bean name="emp" class="com.leoAshu.spring.springcore.Employee"
+		p:id="20" p:name="Ashutosh">
+		<!-- Value as element -->
+		<!-- <property name="id"> <value>20</value> </property> <property name="name"> 
+			<value>Ashutosh</value> </property> -->
+
+		<!-- Value as attribute -->
+		<!-- <property name="id" value="20" /> <property name="name" value="Ashutosh" 
+			/> -->
+	</bean>
+
+</beans>
