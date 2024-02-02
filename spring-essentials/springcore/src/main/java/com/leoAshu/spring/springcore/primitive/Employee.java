@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore;
+package com.leoAshu.spring.springcore.primitive;
 
 public class Employee {
 	private int id;
