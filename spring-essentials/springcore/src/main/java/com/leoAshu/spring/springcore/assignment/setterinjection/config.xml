@@ -8,12 +8,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="item1" class="com.leoAshu.spring.springcore.assignment.Item" p:id="1" p:name="Item1" p:price="100" p:quantity="1" />
-	<bean name="item2" class="com.leoAshu.spring.springcore.assignment.Item" p:id="2" p:name="Item2" p:price="200" p:quantity="2" />
-	<bean name="item3" class="com.leoAshu.spring.springcore.assignment.Item" p:id="3" p:name="Item3" p:price="300" p:quantity="3" />
-	<bean name="item4" class="com.leoAshu.spring.springcore.assignment.Item" p:id="4" p:name="Item4" p:price="400" p:quantity="4" />
+	<bean name="item1" class="com.leoAshu.spring.springcore.assignment.setterinjection.Item" p:id="1" p:name="Item1" p:price="100" p:quantity="1" />
+	<bean name="item2" class="com.leoAshu.spring.springcore.assignment.setterinjection.Item" p:id="2" p:name="Item2" p:price="200" p:quantity="2" />
+	<bean name="item3" class="com.leoAshu.spring.springcore.assignment.setterinjection.Item" p:id="3" p:name="Item3" p:price="300" p:quantity="3" />
+	<bean name="item4" class="com.leoAshu.spring.springcore.assignment.setterinjection.Item" p:id="4" p:name="Item4" p:price="400" p:quantity="4" />
 	
-	<bean name="shoppingCart" class="com.leoAshu.spring.springcore.assignment.ShoppingCart">
+	<bean name="shoppingCart" class="com.leoAshu.spring.springcore.assignment.setterinjection.ShoppingCart">
 		<property name="items">
 			<list>
 				<ref bean="item1" />

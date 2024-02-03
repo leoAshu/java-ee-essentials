@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore.dependencycheck.assignment;
+package com.leoAshu.spring.springcore.assignment.dependencycheck;
 
 import org.springframework.beans.factory.annotation.Required;
 

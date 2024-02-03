@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore.dependencycheck.assignment;
+package com.leoAshu.spring.springcore.assignment.dependencycheck;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/leoAshu/spring/springcore/dependencycheck/assignment/config.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/leoAshu/spring/springcore/assignment/dependencycheck/config.xml");
 		
 		University university1 = (University) ctx.getBean("university");
 		System.out.println(university1);

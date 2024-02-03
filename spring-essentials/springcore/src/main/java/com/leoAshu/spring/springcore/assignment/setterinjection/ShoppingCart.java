@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore.assignment;
+package com.leoAshu.spring.springcore.assignment.setterinjection;
 
 import java.util.List;
 

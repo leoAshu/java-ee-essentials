@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore.primitive;
+package com.leoAshu.spring.springcore.setterinjection.primitive;
 
 public class Employee {
 	private int id;

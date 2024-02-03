@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore.reference;
+package com.leoAshu.spring.springcore.setterinjection.reference;
 
 public class Student {
 	private Scores scores;

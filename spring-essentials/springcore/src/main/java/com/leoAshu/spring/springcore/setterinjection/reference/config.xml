@@ -8,10 +8,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="university" p:id="10"
-		p:name="San Jose State University" p:location="San Jose"
-		scope="prototype"
-		class="com.leoAshu.spring.springcore.dependencycheck.assignment.University" />
+	<bean name="scores" class="com.leoAshu.spring.springcore.setterinjection.reference.Scores" p:maths="95" p:physics="90" p:chemistry="78" />
+	
+	<bean name="student" class="com.leoAshu.spring.springcore.setterinjection.reference.Student" p:scores-ref="scores" />
 
-	<context:annotation-config />
 </beans>

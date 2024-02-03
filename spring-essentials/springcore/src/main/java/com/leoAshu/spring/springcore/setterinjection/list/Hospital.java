@@ -1,4 +1,4 @@
-package com.leoAshu.spring.springcore.list;
+package com.leoAshu.spring.springcore.setterinjection.list;
 
 import java.util.List;
 

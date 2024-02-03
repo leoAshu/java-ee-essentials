@@ -8,15 +8,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="hospital" class="com.leoAshu.spring.springcore.list.Hospital">
-	<property name="name" value="Kona Lions" />
-	<property name="departments">
-		<list>
-			<value>Front Desk</value>
-			<value>In Patient</value>
-			<value>Out Patient</value>
-		</list>
-	</property>
+	<!-- Value using p-schema or p-namespace -->
+	<bean name="emp" class="com.leoAshu.spring.springcore.setterinjection.primitive.Employee"
+		p:id="20" p:name="Ashutosh">
+		<!-- Value as element -->
+		<!-- <property name="id"> <value>20</value> </property> <property name="name"> 
+			<value>Ashutosh</value> </property> -->
+
+		<!-- Value as attribute -->
+		<!-- <property name="id" value="20" /> <property name="name" value="Ashutosh" 
+			/> -->
 	</bean>
 
 </beans>
